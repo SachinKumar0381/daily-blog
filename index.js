@@ -17,7 +17,7 @@ app.use("/login",loginRoute);
 app.use("/profile",profileRoute);
 
 
-app.listen("8080",async()=>{
+app.listen(process.env.PORT || 8080,async()=>{
     await connection;
     console.log("server started");
 })
